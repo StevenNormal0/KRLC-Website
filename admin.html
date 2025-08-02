@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel - KRLC</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Admin Panel - KRLC</h1>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <main>
+    <section class="admin-news-form">
+      <h2>Post News</h2>
+      <form id="news-form">
+        <input type="text" id="news-title" placeholder="News Title" required />
+        <textarea id="news-content" placeholder="News Content" required></textarea>
+        <button type="submit">Post</button>
+      </form>
+    </section>
+
+    <section class="admin-news-list">
+      <h2>All News</h2>
+      <div id="news-list"></div>
+    </section>
+  </main>
+  <h2>Upload Image or Video</h2>
+<form id="upload-form" enctype="multipart/form-data" method="post" action="upload.php">
+  <input type="file" name="media" accept="image/*,video/*" required />
+  <button type="submit">Upload</button>
+</form>
+
+<div id="upload-result"></div>
+
+  <script src="js/script.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
